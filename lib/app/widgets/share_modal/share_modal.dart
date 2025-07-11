@@ -66,7 +66,7 @@ class ShareModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.3,
+      height: MediaQuery.of(context).size.height * 0.5,
       decoration: BoxDecoration(
         color: Color(0xFF1F1D2B),
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
