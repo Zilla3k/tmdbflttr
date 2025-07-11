@@ -67,22 +67,18 @@ O **Movie Database App** é um aplicativo Flutter desenvolvido como parte de um 
 
 ### **Tela Inicial**
 
-Exibe as categorias de filmes em carrosséis.
 ![Tela Inicial](assets/screenshots/home.png)
 
 ### **Busca de Filmes**
 
-Permite pesquisar filmes por título.
 ![Busca de Filmes](assets/screenshots/search.png)
 
 ### **Detalhes do Filme**
 
-Exibe informações detalhadas sobre o filme, incluindo elenco e trailer.
 ![Detalhes do Filme](assets/screenshots/details.png)
 
 ### **Compartilhar Informações do Filme**
 
-Permite compartilhar informações sobre o filme em redes sociais ou copiar.
 ![Compartilhar Filme](assets/screenshots/share.png)
 
 ---
