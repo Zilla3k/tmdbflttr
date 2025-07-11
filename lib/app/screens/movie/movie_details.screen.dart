@@ -138,6 +138,8 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+    final posterPath =
+        "https://image.tmdb.org/t/p/w500${widget.movie.posterPath}";
 
     return Scaffold(
       appBar: AppBar(
@@ -154,8 +156,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
         children: [
           Positioned.fill(
             child: CachedNetworkImage(
-              imageUrl:
-                  'https://image.tmdb.org/t/p/w500${widget.movie.posterPath}',
+              imageUrl: posterPath,
               fit: BoxFit.fill,
               placeholder: (context, url) => Container(
                 color: Colors.transparent,
@@ -186,8 +187,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(6),
                       child: CachedNetworkImage(
-                        imageUrl:
-                            'https://image.tmdb.org/t/p/w500${widget.movie.posterPath}',
+                        imageUrl: posterPath,
                         width: screenWidth * .5,
                         placeholder: (context, url) => Container(
                           color: Colors.transparent,
