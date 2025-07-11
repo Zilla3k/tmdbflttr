@@ -95,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               itemBuilder: (context, index, realIndex) {
                                 final movie = _trending[index];
                                 final imageUrl =
-                                    'https://image.tmdb.org/t/p/w500${movie.backdropPath}';
+                                    'https://image.tmdb.org/t/p/original${movie.backdropPath}';
                                 return GestureDetector(
                                   onTap: () {
                                     Navigator.push(
