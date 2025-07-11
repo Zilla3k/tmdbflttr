@@ -26,7 +26,7 @@ O **Movie Database App** é um aplicativo Flutter desenvolvido como parte de um 
 - **API TMDb**: Fonte de dados sobre filmes.
 - **Pacotes Flutter**:
   - [`cached_network_image`](https://pub.dev/packages/cached_network_image): Para armazenar imagens em cache.
-- [`flutter_dotenv`](https://pub.dev/packages/flutter_dotenv): Para armazenar as chaves secretas e manter a segurança.
+  - [`flutter_dotenv`](https://pub.dev/packages/flutter_dotenv): Para armazenar as chaves secretas e manter a segurança.
   - [`carousel_slider`](https://pub.dev/packages/carousel_slider): Para exibir carrosséis de filmes.
   - [`http`](https://pub.dev/packages/http): Para realizar chamadas HTTP.
   - [`share_plus`](https://pub.dev/packages/share_plus): Para compartilhar informações.
