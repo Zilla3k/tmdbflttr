@@ -79,7 +79,7 @@ O **Movie Database App** é um aplicativo Flutter desenvolvido como parte de um 
 
 ### **Compartilhar Informações do Filme**
 
-![Compartilhar Filme](assets/screenshots/share.png)
+![Compartilhar Filme](assets/screenshots/sharing.png)
 
 ---
 
