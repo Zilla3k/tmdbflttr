@@ -1,0 +1,35 @@
+name: movie_database
+description: 'Flutter application for internship test.'
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: 3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cached_network_image: 3.4.1
+  flutter_dotenv: 5.1.0
+  carousel_slider: 5.1.1
+  http: 1.4.0
+  share_plus: 7.2.1
+  url_launcher: 6.3.1
+  font_awesome_flutter: 10.8.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 5.0.0
+  flutter_launcher_icons: 0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: 'assets/icons/app-icon.png'
