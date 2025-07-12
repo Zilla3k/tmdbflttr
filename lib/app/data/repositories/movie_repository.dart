@@ -127,13 +127,13 @@ class MovieRepository {
     }
   }
 
-  Future<Map<String, dynamic>> fetchCast(int movieId) async {
+  Future<List<Map<String, dynamic>>> fetchCast(int movieId) async {
     final cacheKey = 'cast_$movieId';
     final cachedData = _getFromCache(cacheKey);
 
     if (cachedData != null) {
       debugPrint('Returning cached cast for movie ID: $movieId');
-      return cachedData;
+      return List<Map<String, dynamic>>.from(cachedData);
     }
 
     try {
@@ -148,14 +148,17 @@ class MovieRepository {
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        _saveToCache(cacheKey, data);
-        return data;
+        final castList = data['cast'] is List
+            ? List<Map<String, dynamic>>.from(data['cast'])
+            : <Map<String, dynamic>>[];
+        _saveToCache(cacheKey, castList);
+        return castList;
       } else {
-        throw Exception('Error fetching cast and crew: ${response.body}');
+        throw Exception('Error fetching cast: ${response.body}');
       }
     } catch (e) {
-      debugPrint('Error fetchCastAndCrew: $e');
-      throw Exception('Error fetchCastAndCrew');
+      debugPrint('Error fetchCast: $e');
+      return <Map<String, dynamic>>[];
     }
   }
 
@@ -323,8 +326,7 @@ class MovieRepository {
         final videos = data['results'] as List;
 
         for (var video in videos) {
-          if (video['site'] == 'YouTube' &&
-              (video['type'] == 'Trailer' || video['type'] == 'Teaser')) {
+          if (video['site'] == 'YouTube') {
             final trailerKey = video['key'];
             _saveToCache(cacheKey, trailerKey);
             return trailerKey;
