@@ -31,6 +31,7 @@ O **Movie Database App** é um aplicativo Flutter desenvolvido como parte de um 
   - [`http`](https://pub.dev/packages/http): Para realizar chamadas HTTP.
   - [`share_plus`](https://pub.dev/packages/share_plus): Para compartilhar informações.
   - [`url_launcher`](https://pub.dev/packages/url_launcher): Para abrir links externos.
+  - [`provider`](https://pub.dev/packages/provider): Para o gerenciamento de estados.
 
 ---
 
@@ -87,6 +88,7 @@ O **Movie Database App** é um aplicativo Flutter desenvolvido como parte de um 
 
 - **Cache de Dados**: Reduz chamadas repetidas à API.
 - **Responsividade**: Interface adaptada para diferentes tamanhos de tela.
+- **Gerenciamento de Estado**: Uso do `Provider` para separar lógica de negócios da interface.
 
 ---
 
@@ -95,6 +97,5 @@ O **Movie Database App** é um aplicativo Flutter desenvolvido como parte de um 
 - Adicionar suporte a internacionalização (i18n) com o pacote `flutter_localizations`.
 - Implementar testes unitários e de integração.
 - Melhorar a interface com animações e transições mais suaves.
-- Gerenciamento de Estado: Uso do `Provider` para separar lógica de negócios da interface.
 
 ---
